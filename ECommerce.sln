@@ -75,6 +75,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBMktService.Domain", "Grpc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBMktService.Infrastructure", "GrpcServices\FBMktService\FBMktService.Infrastructure\FBMktService.Infrastructure.csproj", "{3E396761-2C97-4D37-B6FE-B71D5E1D6969}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API-Gateway", "API-Gateway", "{5BEC0EF9-35D9-4DC3-BAF9-69CF96F1DB32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "API-Gateway\APIGateway\APIGateway.csproj", "{5DF3DC03-A3F3-4F07-842C-40D9485C8C68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +193,10 @@ Global
 		{3E396761-2C97-4D37-B6FE-B71D5E1D6969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E396761-2C97-4D37-B6FE-B71D5E1D6969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E396761-2C97-4D37-B6FE-B71D5E1D6969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DF3DC03-A3F3-4F07-842C-40D9485C8C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DF3DC03-A3F3-4F07-842C-40D9485C8C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DF3DC03-A3F3-4F07-842C-40D9485C8C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DF3DC03-A3F3-4F07-842C-40D9485C8C68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -228,5 +236,6 @@ Global
 		{07812876-24A8-47BD-8D2C-086B248E06A3} = {EDF2A6F4-06D0-43C5-B355-FAEBE4486695}
 		{21B3BCC4-690F-4562-82FD-17DEDED0C4F8} = {EDF2A6F4-06D0-43C5-B355-FAEBE4486695}
 		{3E396761-2C97-4D37-B6FE-B71D5E1D6969} = {EDF2A6F4-06D0-43C5-B355-FAEBE4486695}
+		{5DF3DC03-A3F3-4F07-842C-40D9485C8C68} = {5BEC0EF9-35D9-4DC3-BAF9-69CF96F1DB32}
 	EndGlobalSection
 EndGlobal

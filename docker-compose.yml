@@ -1,0 +1,117 @@
+﻿services:
+
+  # ✅ API Gateway (Ocelot)
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: API-Gateway/APIGateway/Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - identityservice
+      - orderservice
+      - productservice
+      - shoppingcartservice
+      - fbmktservice
+      - inventoryservice
+      - paymentservice
+    networks:
+      - ecommerce-network
+
+  # ✅ Identity Service (WebAPI)
+  identityservice:
+    image: ${DOCKER_REGISTRY-}identityservice
+    build:
+      context: .
+      dockerfile: Services/IdentityService/Dockerfile
+    ports:
+      - "5001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - ecommerce-network
+
+  # ✅ Order Service (WebAPI)
+  orderservice:
+    image: ${DOCKER_REGISTRY-}orderservice
+    build:
+      context: .
+      dockerfile: Services/OrderService/Dockerfile
+    ports:
+      - "5002:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - ecommerce-network
+
+  # ✅ Product Service (WebAPI)
+  productservice:
+    image: ${DOCKER_REGISTRY-}productservice
+    build:
+      context: .
+      dockerfile: Services/ProductService/Dockerfile
+    ports:
+      - "5003:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - ecommerce-network
+
+  # ✅ Shopping Cart Service (WebAPI)
+  shoppingcartservice:
+    image: ${DOCKER_REGISTRY-}shoppingcartservice
+    build:
+      context: .
+      dockerfile: Services/ShoppingCartService/Dockerfile
+    ports:
+      - "5004:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - ecommerce-network
+
+  # ✅ Facebook Marketplace Service (gRPC)
+  fbmktservice:
+    image: ${DOCKER_REGISTRY-}fbmktservice
+    build:
+      context: .
+      dockerfile: Services/FBMktService/Dockerfile
+    ports:
+      - "5005:5003"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - ecommerce-network
+
+  # ✅ Inventory Service (gRPC)
+  inventoryservice:
+    image: ${DOCKER_REGISTRY-}inventoryservice
+    build:
+      context: .
+      dockerfile: Services/InventoryService/Dockerfile
+    ports:
+      - "5006:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - ecommerce-network
+
+  # ✅ Payment Service (gRPC)
+  paymentservice:
+    image: ${DOCKER_REGISTRY-}paymentservice
+    build:
+      context: .
+      dockerfile: Services/PaymentService/Dockerfile
+    ports:
+      - "5007:5002"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - ecommerce-network
+
+networks:
+  ecommerce-network:
+    driver: bridge
