@@ -78,7 +78,7 @@
     image: ${DOCKER_REGISTRY-}fbmktservice
     build:
       context: .
-      dockerfile: Services/FBMktService/Dockerfile
+      dockerfile: GrpcServices/FBMktService/Dockerfile
     ports:
       - "5005:5003"
     environment:
@@ -91,7 +91,7 @@
     image: ${DOCKER_REGISTRY-}inventoryservice
     build:
       context: .
-      dockerfile: Services/InventoryService/Dockerfile
+      dockerfile: GrpcServices/InventoryService/Dockerfile
     ports:
       - "5006:5001"
     environment:
@@ -104,7 +104,7 @@
     image: ${DOCKER_REGISTRY-}paymentservice
     build:
       context: .
-      dockerfile: Services/PaymentService/Dockerfile
+      dockerfile: GrpcServices/PaymentService/Dockerfile
     ports:
       - "5007:5002"
     environment:
