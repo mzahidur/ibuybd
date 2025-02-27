@@ -26,7 +26,7 @@
     image: ${DOCKER_REGISTRY-}identityservice
     build:
       context: .
-      dockerfile: Services/IdentityService/Dockerfile
+      dockerfile: Services/IdentityService/IdentityService.API/Dockerfile
     ports:
       - "5001:80"
     environment:
@@ -39,7 +39,7 @@
     image: ${DOCKER_REGISTRY-}orderservice
     build:
       context: .
-      dockerfile: Services/OrderService/Dockerfile
+      dockerfile: Services/OrderService/OrderService.API/Dockerfile
     ports:
       - "5002:80"
     environment:
@@ -52,7 +52,7 @@
     image: ${DOCKER_REGISTRY-}productservice
     build:
       context: .
-      dockerfile: Services/ProductService/Dockerfile
+      dockerfile: Services/ProductService/ProductService.API/Dockerfile
     ports:
       - "5003:80"
     environment:
@@ -65,7 +65,7 @@
     image: ${DOCKER_REGISTRY-}shoppingcartservice
     build:
       context: .
-      dockerfile: Services/ShoppingCartService/Dockerfile
+      dockerfile: Services/ShoppingCartService/ShoppingCartService.API/Dockerfile
     ports:
       - "5004:80"
     environment:
@@ -78,7 +78,7 @@
     image: ${DOCKER_REGISTRY-}fbmktservice
     build:
       context: .
-      dockerfile: GrpcServices/FBMktService/Dockerfile
+      dockerfile: GrpcServices/FBMktService/FBMktService.API/Dockerfile
     ports:
       - "5005:5003"
     environment:
@@ -91,7 +91,7 @@
     image: ${DOCKER_REGISTRY-}inventoryservice
     build:
       context: .
-      dockerfile: GrpcServices/InventoryService/Dockerfile
+      dockerfile: GrpcServices/InventoryService/InventoryService.API/Dockerfile
     ports:
       - "5006:5001"
     environment:
@@ -104,7 +104,7 @@
     image: ${DOCKER_REGISTRY-}paymentservice
     build:
       context: .
-      dockerfile: GrpcServices/PaymentService/Dockerfile
+      dockerfile: GrpcServices/PaymentService/PaymentService.API/Dockerfile
     ports:
       - "5007:5002"
     environment:

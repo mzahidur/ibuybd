@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 var builder = WebApplication.CreateBuilder(args);
 
 // Load Ocelot configuration
-builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
+builder.Configuration.AddJsonFile("./Configuration/ocelot.json", optional: false, reloadOnChange: true);
 
 // Add Ocelot services
 builder.Services.AddOcelot();
