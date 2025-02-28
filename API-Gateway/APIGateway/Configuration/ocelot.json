@@ -6,7 +6,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "identityservice",
+          "Host": "ibuybd-identityservice-1",
           "Port": 80
         }
       ],
@@ -24,7 +24,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "orderservice",
+          "Host": "ibuybd-orderservice-1",
           "Port": 80
         }
       ],
@@ -38,7 +38,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "productservice",
+          "Host": "ibuybd-productservice-1",
           "Port": 80
         }
       ],
@@ -52,7 +52,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "shoppingcartservice",
+          "Host": "ibuybd-shoppingcartservice-1",
           "Port": 80
         }
       ],
@@ -66,7 +66,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "fbmktservice",
+          "Host": "ibuybd-fbmktservice-1",
           "Port": 5003
         }
       ],
@@ -83,7 +83,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "inventoryservice",
+          "Host": "ibuybd-inventoryservice-1",
           "Port": 5001
         }
       ],
@@ -100,7 +100,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "paymentservice",
+          "Host": "ibuybd-paymentservice-1",
           "Port": 5002
         }
       ],
